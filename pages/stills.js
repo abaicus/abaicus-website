@@ -8,7 +8,7 @@ export default function () {
   const [current, setCurrent] = useState("");
   const files = [];
 
-  Array.from(Array(5)).forEach((i, idx) => {
+  Array.from(Array(23)).forEach((i, idx) => {
     files.push(`/images/portfolio/${idx}.jpg`);
   });
 
