@@ -47,7 +47,7 @@ export default function () {
 
       <div
         role="list"
-        className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 xl:gap-x-8 my-20"
+        className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 xl:gap-x-8 my-20"
       >
         {files.map((file) => {
           return (
