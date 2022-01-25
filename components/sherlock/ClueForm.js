@@ -43,6 +43,7 @@ export const ClueForm = ({ onAdd, location, value, empty, lang }) => {
         <div className="md:ml-auto md:w-40 flex-grow md:flex-grow-0 relative">
           <HashtagIcon className="pointer-events-none absolute w-4 h-4 left-2 top-1/2 -translate-y-1/2 text-gray-500" />
           <input
+            pattern="\d*"
             className={classNames(
               "pl-7 focus:ring-sky-300 focus:border-sky-500 w-full h-10 text-gray-800 border bg-white-50 rounded-l-md text-base",
               empty ? "bg-white-50" : "bg-gray-100"
