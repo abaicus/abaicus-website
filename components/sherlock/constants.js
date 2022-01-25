@@ -1,23 +1,37 @@
-const LocalStorageKey = 'sherlock-app';
+const LocalStorageKey = "sherlock-app";
 
 const Locations = {
-    "Farmacie": null,
-    "Banca": null,
-    "Depoul de trasuri": null,
-    "Docuri": null,
-    "Hotel": null,
-    "Lacatus": null,
-    "Muzeu": null,
-    "Magazinul de Ziare": null,
-    "Parc": null,
-    "Amanet": null,
-    "Teatru": null,
-    "Taverna": null,
-    "Scotland Yard": null,
-    "Tutungerie": null,
+  Farmacie: "",
+  Banca: "",
+  "Depoul de trasuri": "",
+  Docuri: "",
+  Hotel: "",
+  Lacatus: "",
+  Muzeu: "",
+  "Magazinul de Ziare": "",
+  Parc: "",
+  Amanet: "",
+  Teatru: "",
+  Taverna: "",
+  "Scotland Yard": "",
+  Tutungerie: "",
 };
 
-export {
-    LocalStorageKey,
-    Locations
-}
+const LocationNamesEn = {
+  Farmacie: "Chemist",
+  Banca: "Bank",
+  "Depoul de trasuri": "Carriage Depot",
+  Docuri: "Docks",
+  Hotel: "Hotel",
+  Lacatus: "Locksmith",
+  Muzeu: "Museum",
+  "Magazinul de Ziare": "Newsagents",
+  Parc: "Park",
+  Amanet: "Pawnbroker",
+  Teatru: "Theatre",
+  Taverna: "Boar's Head",
+  "Scotland Yard": "Scotland Yard",
+  Tutungerie: "Tobacconist",
+};
+
+export { LocalStorageKey, Locations, LocationNamesEn };
