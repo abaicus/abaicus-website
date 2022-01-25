@@ -8,7 +8,7 @@ export default function () {
   const [current, setCurrent] = useState("");
   const files = [];
 
-  Array.from(Array(23)).forEach((i, idx) => {
+  Array.from(Array(5)).forEach((i, idx) => {
     files.push(`/images/portfolio/${idx}.jpg`);
   });
 
@@ -69,9 +69,9 @@ export default function () {
         <a
           href="https://instagram.com/abaicus92"
           target="_blank"
-          className="flex justify-center no-underline shadow-sm hover:scale-105 hover:shadow-lg hover:bg-gradient-to-tr hover:from-pink-500 hover:to-yellow-500 transition-all ease-out duration-300 rounded-lg overflow-hidden focus:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-sky-500 hover:text-white text-orange-500 bg-gray-100 dark:bg-gray-800"
+          className="flex justify-center no-underline shadow-sm hover:scale-105 hover:shadow-lg hover:bg-gradient-to-tr hover:from-pink-800 hover:to-orange-500  transition-all ease-out duration-300 rounded-lg overflow-hidden focus:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-sky-500 hover:text-white text-orange-500 bg-gray-100 dark:bg-gray-800"
         >
-          <div className="flex flex-col w-full h-full items-center justify-center">
+          <div className="flex flex-col py-16 w-full h-full items-center justify-center">
             <CameraIcon className="h-7 w-7" />
             <span>Instagram</span>
           </div>
