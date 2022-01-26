@@ -58,37 +58,36 @@ export default function IndexPage() {
             {features.map((feature) => (
               <Link key={feature.name} href={feature.link || "#"}>
                 <a
-                  className={`pt-6 no-underline font-normal group transition-all ${
-                    feature.additional || ""
-                  }`}
+                  className={`pt-6 no-underline font-normal group transition-all ${feature.additional || ""
+                    }`}
                 >
                   <div
-                    className={`relative flow-root dark:bg-gray-800 bg-gray-50 rounded-lg px-6 pb-6 shadow group-hover:shadow-xl ease-out transition-all ${feature.hover}`}
+                    className={`relative flow-root dark:bg-gray-800 bg-gray-50 rounded-lg px-6 pb-6 shadow group-hover:shadow-xl ease-out transition-all h-full ${feature.hover}`}
                   >
                     <div
                       className={`absolute h-10 w-10 ${feature.color} mix-blend-color-dodge opacity-50 right-5 top-5 rounded-lg hidden group-hover:block`}
                     ></div>
                     <div className="-mt-6">
-                      <div>
-                        <span
-                          className={classNames(
-                            "inline-flex items-center justify-center p-3 rounded-md shadow-sm group-hover:bg-slate-700",
-                            feature.color ? feature.color : "bg-sky-500"
-                          )}
-                        >
-                          <feature.icon
-                            className="h-6 w-6 text-white group-hover:scale-125 transition-all ease-out"
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </div>
-                      <p className="mt-8 text-lg font-medium dark:text-gray-100 text-gray-900 tracking-tight group-hover:text-white">
-                        {feature.name}
-                      </p>
-                      <p className="mt-5 text-base dark:text-gray-300 text-gray-500 group-hover:text-white">
-                        {feature.description}
-                      </p>
+
+                      <span
+                        className={classNames(
+                          "inline-flex items-center justify-center p-3 rounded-md shadow-sm group-hover:bg-slate-700",
+                          feature.color ? feature.color : "bg-sky-500"
+                        )}
+                      >
+                        <feature.icon
+                          className="h-6 w-6 text-white group-hover:scale-125 transition-all ease-out"
+                          aria-hidden="true"
+                        />
+                      </span>
                     </div>
+                    <p className="mt-8 text-lg font-medium dark:text-gray-100 text-gray-900 tracking-tight group-hover:text-white">
+                      {feature.name}
+                    </p>
+                    <p className="mt-auto text-base dark:text-gray-300 text-gray-500 group-hover:text-white">
+                      {feature.description}
+                    </p>
+
                   </div>
                 </a>
               </Link>

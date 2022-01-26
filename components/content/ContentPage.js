@@ -1,14 +1,14 @@
+import { classNames } from "../../common/utils";
 import DocumentHead from "../DocumentHead";
 
-export default function ({ title, byline, subtitle, children, pageClass }) {
+export default function ({ title, byline, subtitle, children, pageClass, extraBodyClass = '' }) {
   return (
     <>
       <DocumentHead title={title} />
       <div className="flex-1">
         <article
-          className={`relative py-16 ${
-            pageClass || "bg-white dark:bg-zinc-900"
-          } overflow-hidden min-h-full`}
+          className={`relative py-16 ${pageClass || "bg-white dark:bg-zinc-900"
+            } overflow-hidden min-h-full`}
         >
           <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
             <div
@@ -133,7 +133,7 @@ export default function ({ title, byline, subtitle, children, pageClass }) {
                 </p>
               )}
             </div>
-            <div className="mt-6 prose prose-sky prose-lg text-gray-500 dark:text-gray-300 dark:prose-headings:text-neutral-100 mx-auto">
+            <div className={classNames("mt-6 prose prose-sky prose-lg text-gray-500 dark:text-gray-300 dark:prose-headings:text-neutral-100 mx-auto", extraBodyClass)}>
               {children}
             </div>
           </div>
