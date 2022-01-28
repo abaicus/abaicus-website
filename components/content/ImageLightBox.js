@@ -8,11 +8,8 @@ export default function ImageLightbox({
   setOpen,
   setNext,
   setPrev,
+  onClose
 }) {
-  const close = () => {
-    setOpen("");
-  };
-
   const trapKeys = (e) => {
     e = e || window.event;
 
@@ -36,7 +33,7 @@ export default function ImageLightbox({
       <Dialog
         as="div"
         className="fixed z-10 inset-0 overflow-y-auto"
-        onClose={close}
+        onClose={onClose}
       >
         <div className="flex items-center justify-center min-h-screen py-4 px-4  text-center sm:p-0">
           <Transition.Child
@@ -81,7 +78,7 @@ export default function ImageLightbox({
                   </button>
                 </span>}
 
-                <button onClick={close} type="button" className="p-2 rounded-md bg-sky-700 text-gray-300 ml-auto">
+                <button onClick={onClose} type="button" className="p-2 rounded-md bg-sky-700 text-gray-300 ml-auto">
                   <span className="sr-only">Close</span>
                   <XIcon className='h-5 w-5' aria-hidden="true" />
                 </button>
