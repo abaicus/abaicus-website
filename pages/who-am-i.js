@@ -1,7 +1,15 @@
-import ContentPage from "../components/content/ContentPage";
 import ContentImage from "../components/content/ContentImage";
-import aboutImage from "../public/images/about-me.jpg";
-export default function About() {
+import ContentPage from "../components/content/ContentPage";
+import { getPlaiceholder } from "plaiceholder";
+
+export const getStaticProps = async () => {
+  const { base64, img } = await getPlaiceholder('/images/about-me.jpg');
+
+  return { props: { image: { base64, img } } }
+};
+
+export default function About({ image }) {
+  const { img, base64 } = image;
   return (
     <ContentPage title="About Me" byline="Andrei Baicus">
       <>
@@ -24,7 +32,7 @@ export default function About() {
         <div className="relative my-20">
           <div className="absolute h-full w-1/2 z-10 r-0 mix-blend-multiply bg-sky-400 -rotate-45 -right-10 opacity-100 rounded-lg" />
 
-          <ContentImage src={aboutImage} alt="Me holding a photo camera" />
+          <ContentImage src={img.src} alt="Me holding a photo camera" phSRC={base64} blurPH={true} />
         </div>
 
         <p>
