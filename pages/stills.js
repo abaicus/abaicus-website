@@ -6,26 +6,6 @@ import { classNames } from "../common/utils";
 import { getPlaiceholder } from "plaiceholder";
 import { useState } from "react";
 
-export const getStaticProps = async () => {
-  const files = [];
-  const exclude = [10];
-
-  Array.from(Array(23)).forEach((i, idx) => {
-    if (exclude.includes(idx)) {
-      return;
-    }
-    files.push(`/images/portfolio/${idx}.jpg`);
-  });
-
-
-
-  const images = await Promise.all(files.map(async (file) => {
-    const { base64, img } = await getPlaiceholder(file);
-    return { base64, img };
-  }));
-
-  return { props: { images } }
-};
 export default function ({ images }) {
   const [current, setCurrent] = useState(null);
 
@@ -105,3 +85,24 @@ export default function ({ images }) {
     </ContentPage>
   );
 }
+
+export const getStaticProps = async () => {
+  const files = [];
+  const exclude = [10];
+
+  Array.from(Array(23)).forEach((i, idx) => {
+    if (exclude.includes(idx)) {
+      return;
+    }
+    files.push(`/images/portfolio/${idx}.jpg`);
+  });
+
+
+
+  const images = await Promise.all(files.map(async (file) => {
+    const { base64, img } = await getPlaiceholder(file);
+    return { base64, img };
+  }));
+
+  return { props: { images } }
+};

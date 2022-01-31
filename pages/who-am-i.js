@@ -1,5 +1,6 @@
 import ContentImage from "../components/content/ContentImage";
 import ContentPage from "../components/content/ContentPage";
+import ImageDecorator from "../components/content/ImageDecorator";
 import { getPlaiceholder } from "plaiceholder";
 
 export const getStaticProps = async () => {
@@ -27,13 +28,13 @@ export default function About({ image }) {
           island.
         </p>
 
-        <h2>What’s the deal with me?</h2>
 
-        <div className="relative my-20">
-          <div className="absolute h-full w-1/2 z-10 r-0 mix-blend-multiply bg-sky-400 -rotate-45 -right-10 opacity-100 rounded-lg" />
-
+        <div className="relative my-20 group">
+          <ImageDecorator />
           <ContentImage src={img.src} alt="Me holding a photo camera" phSRC={base64} blurPH={true} />
         </div>
+
+        <h2>What’s the deal with me?</h2>
 
         <p>
           I’ve studied Film Editing and Sound Design here in Bucharest. Even

@@ -1,5 +1,5 @@
-import { classNames } from "../../common/utils";
 import DocumentHead from "../DocumentHead";
+import { classNames } from "../../common/utils";
 
 export default function ({ title, byline, subtitle, children, pageClass, extraBodyClass = '' }) {
   return (
@@ -24,7 +24,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
               >
                 <defs>
                   <pattern
-                    id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
+                    id="dots"
                     x={0}
                     y={0}
                     width={20}
@@ -44,7 +44,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
                 <rect
                   width={300}
                   height={300}
-                  fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
+                  fill="url(#dots)"
                 />
               </svg>
               <svg
@@ -56,7 +56,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
               >
                 <defs>
                   <pattern
-                    id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+                    id="dots"
                     x={0}
                     y={0}
                     width={20}
@@ -76,7 +76,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
                 <rect
                   width={300}
                   height={300}
-                  fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+                  fill="url(#dots)"
                 />
               </svg>
               <svg
@@ -88,7 +88,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
               >
                 <defs>
                   <pattern
-                    id="d3eb07ae-5182-43e6-857d-35c643af9034"
+                    id="dots"
                     x={0}
                     y={0}
                     width={20}
@@ -108,7 +108,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
                 <rect
                   width={300}
                   height={300}
-                  fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"
+                  fill="url(#dots)"
                 />
               </svg>
             </div>
@@ -117,7 +117,7 @@ export default function ({ title, byline, subtitle, children, pageClass, extraBo
             <div className="text-lg max-w-prose mx-auto">
               <h1>
                 {byline && (
-                  <span className="block text-base text-center text-sky-600 font-semibold tracking-wide uppercase dark:text-sky-500">
+                  <span className="block text-base text-center text-sky-500 font-semibold tracking-wide uppercase dark:text-sky-500">
                     {byline}
                   </span>
                 )}
