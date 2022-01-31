@@ -5,6 +5,7 @@ import ContentImage from '../../components/content/ContentImage';
 import ContentPage from '../../components/content/ContentPage';
 import Head from 'next/head';
 import ImageDecorator from '../../components/content/ImageDecorator';
+import ScrollIndicator from '../../components/content/ScrollIndicator';
 import { getPlaiceholder } from 'plaiceholder';
 import markdownToHtml from '../../lib/markdownToHtml';
 
@@ -25,35 +26,39 @@ export default function Post({ post }) {
 
     const { base64, img } = coverImage;
 
+
     return (
-        <ContentPage
-            title={title || ''}
-            subtitle={description || ''}
-            byline={
-                <BlogMeta author={author} date={displayDate} />
-            }>
+        <>
+            <ContentPage
+                title={title || ''}
+                subtitle={description || ''}
+                byline={
+                    <BlogMeta author={author} date={displayDate} />
+                }>
 
-            <Head>
-                <meta property="og:image" content={ogImage.url || img} />
-            </Head>
+                <ScrollIndicator />
+
+                <Head>
+                    <meta property="og:image" content={ogImage.url || img} />
+                </Head>
 
 
-            <div className=" mx-5 lg:-mx-20 my-20 relative group">
-                <ImageDecorator />
-                <ImageDecorator overlay={true} />
-                <ContentImage
-                    alt={coverAlt || `${title} - featured image`}
-                    blurPH={true}
-                    phSRC={base64}
-                    src={img}
-                    w={1200}
-                    h={650}
-                />
-            </div>
+                <div className=" mx-5 lg:-mx-20 my-20 relative group">
+                    <ImageDecorator />
+                    <ImageDecorator overlay={true} />
+                    <ContentImage
+                        alt={coverAlt || `${title} - featured image`}
+                        blurPH={true}
+                        phSRC={base64}
+                        src={img}
+                        w={1200}
+                        h={650}
+                    />
+                </div>
 
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-        </ContentPage >
-
+                <div dangerouslySetInnerHTML={{ __html: content }} />
+            </ContentPage >
+        </>
     );
 }
 
