@@ -1,9 +1,10 @@
 import DocumentHead from "../DocumentHead";
+import ScrollIndicator from "./ScrollIndicator";
 import { classNames } from "../../common/utils";
-
 export default function ({ title, byline, subtitle, children, pageClass, extraBodyClass = '' }) {
   return (
     <>
+      <ScrollIndicator />
       <DocumentHead title={title} />
       <div className="flex-1">
         <article
