@@ -10,7 +10,17 @@ export default function ScrollIndicator() {
             st = 'scrollTop',
             sh = 'scrollHeight';
 
-        return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        const percentage = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+
+        if (percentage < 5) {
+            return 0;
+        }
+
+        if (percentage > 95) {
+            return 100;
+        }
+
+        return percentage;
     }
 
     useEffect(() => {
@@ -22,5 +32,5 @@ export default function ScrollIndicator() {
         })
     }, []);
 
-    return <div className='fixed top-0 left-0 h-1.5 bg-sky-600 dark:bg-sky-300 z-10 transition-all' style={{ width: `${readPct}%` }} />
+    return <div className='fixed top-0 left-0 h-1.5 bg-sky-500 dark:bg-sky-300 z-10 transition-all' style={{ width: `${readPct}%` }} />
 }

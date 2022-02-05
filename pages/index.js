@@ -4,7 +4,7 @@ import {
   FilmIcon,
   PlayIcon,
   CameraIcon,
-  CakeIcon,
+  BeakerIcon,
 } from "@heroicons/react/outline";
 
 import { classNames } from "../common/utils";
@@ -29,6 +29,16 @@ const features = [
     hover: "group-hover:bg-orange-500",
   },
   {
+    name: "Playground",
+    description:
+      "Here I'll be adding frontend stuff I create in my spare time, just for the sake of it...",
+    icon: BeakerIcon,
+    link: "/playground",
+    color: "bg-red-500",
+    hover: "group-hover:bg-red-500",
+    additional: "group-hover:bg-red-500",
+  },
+  {
     name: "Board Games",
     description:
       "Board game helpers. Right now there's just one, but there might be more in the future, who knows...",
@@ -36,16 +46,6 @@ const features = [
     link: "/sherlock",
     color: "bg-green-500",
     hover: "group-hover:bg-green-500",
-  },
-  {
-    name: "Coming soon... maybe",
-    description:
-      "This grid would look terrible with three cards on desktop, so here it is, the filler element...",
-    icon: CakeIcon,
-    link: "#",
-    color: "bg-pink-500",
-    hover: "group-hover:bg-pink-500",
-    additional: "hidden sm:block pointer-events-none opacity-70",
   },
 ];
 
